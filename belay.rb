@@ -5,21 +5,21 @@
 class Belay < Formula
   desc "AI-aware local version control for concurrent agent workflows"
   homepage "https://github.com/davidparkercodes/belay"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/davidparkercodes/belay/releases/download/v1.2.0/belay_1.2.0_darwin_amd64.tar.gz"
-      sha256 "8cfa62ecfd62e433c324ac78c6211d9655e66980fd9c97ff76bc9f9af06d7a96"
+      url "https://github.com/davidparkercodes/belay/releases/download/v1.3.0/belay_1.3.0_darwin_amd64.tar.gz"
+      sha256 "f9f49dba9b74b82e7e310973bae2e1ef72a244c2256006df3325d436260eaba1"
 
       define_method(:install) do
         bin.install "belay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/davidparkercodes/belay/releases/download/v1.2.0/belay_1.2.0_darwin_arm64.tar.gz"
-      sha256 "2f23ced6f1b5a6582319944184314880d86ad9973c490e9768559df6862473de"
+      url "https://github.com/davidparkercodes/belay/releases/download/v1.3.0/belay_1.3.0_darwin_arm64.tar.gz"
+      sha256 "dff439fd37226aefb106c4785e76d075b165f17ccc8d28a350658bcdc66acee5"
 
       define_method(:install) do
         bin.install "belay"
@@ -29,15 +29,15 @@ class Belay < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davidparkercodes/belay/releases/download/v1.2.0/belay_1.2.0_linux_amd64.tar.gz"
-      sha256 "e069870b651ee8704e6a5d56e9af92e4c7d34d9213064172ebdacea6951a1131"
+      url "https://github.com/davidparkercodes/belay/releases/download/v1.3.0/belay_1.3.0_linux_amd64.tar.gz"
+      sha256 "fd2b756355353b0da244e1f70280e496abccd1fe9876e48a817e2e4b299fab74"
       define_method(:install) do
         bin.install "belay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davidparkercodes/belay/releases/download/v1.2.0/belay_1.2.0_linux_arm64.tar.gz"
-      sha256 "1eddbf1fdfe0f3e8440a1a06a1b345348c9dbf04b024997598cb07a79766378f"
+      url "https://github.com/davidparkercodes/belay/releases/download/v1.3.0/belay_1.3.0_linux_arm64.tar.gz"
+      sha256 "5aab785279bc73438d74e3431790f269586b1332faf1fd4bed6248f742b61659"
       define_method(:install) do
         bin.install "belay"
       end
